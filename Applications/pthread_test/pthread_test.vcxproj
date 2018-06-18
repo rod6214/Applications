@@ -123,6 +123,10 @@
     <ClInclude Include="..\include\pthread\pthread.h" />
     <ClInclude Include="..\include\pthread\sched.h" />
     <ClInclude Include="..\include\pthread\semaphore.h" />
+    <ClInclude Include="libraries.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
