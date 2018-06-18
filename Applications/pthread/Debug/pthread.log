@@ -1,2 +1,4 @@
 ﻿  pthread.c
-c:\users\nelson\source\repos\applications\applications\src\pthread.c(39): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+     Creating library ..\bin\pthread.lib and object ..\bin\pthread.exp
+  pthread.vcxproj -> C:\Users\NELSON\Source\Repos\Applications\Applications\pthread\..\bin\pthread.dll
+  pthread.vcxproj -> ..\bin\pthread.pdb (Partial PDB)
