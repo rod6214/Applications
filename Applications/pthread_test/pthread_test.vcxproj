@@ -76,6 +76,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\NELSON\Source\Repos\Applications\Applications\include\pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\Users\NELSON\Source\Repos\Applications\Applications\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
