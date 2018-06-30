@@ -1,0 +1,43 @@
+﻿
+
+@{
+    ViewBag.Title = "Registro";
+}
+
+<div class="row mt-6">
+    <h3 class="text-center col"><span class="border-bottom">Registro</span></h3>
+</div>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <form action=@Url.Action("Registrar", "Registro") method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Nombre</label>
+                    <input type="text" class="form-control" id="inputName4" name="nombre" placeholder="Nombre">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Apellido</label>
+                    <input type="text" class="form-control" id="inputLastname4" name="apellido" placeholder="Apellido">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md">
+                    <label for="inputEmail4">Correo</label>
+                    <input type="email" class="form-control" id="email4" name="correo" placeholder="Correo">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword41" name="contrasena" placeholder="Contraseña">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Repita la contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword42" placeholder="Contraseña">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+</div>

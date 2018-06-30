@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GeneralTest01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="64" />
+    <Property Name="apellido" Type="varchar" MaxLength="64" />
+    <Property Name="contrasena" Type="varchar" MaxLength="1024" />
+    <Property Name="correo" Type="varchar" MaxLength="64" />
+    <Property Name="userRole" Type="varchar" MaxLength="20" />
+    <Property Name="lastLogindate" Type="datetime" />
+    <Property Name="lastLockoutDate" Type="datetime" />
+    <Property Name="lastActivityDate" Type="datetime" />
+    <Property Name="creationDate" Type="datetime" />
+    <Property Name="lastPasswordChangedDate" Type="datetime" />
+    <Property Name="userName" Type="varchar" MaxLength="32" />
+    <Property Name="isApproved" Type="bit" />
+    <Property Name="isLockedOut" Type="bit" />
+    <Property Name="isOnline" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="GeneralTest01ModelStoreContainer">
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
