@@ -2,6 +2,5 @@
   nsys.cpp
   main.cpp
   Generating Code...
-  LINK : ..\bin\Testing.exe not found or not built by the last incremental link; performing full link
   Applications.vcxproj -> C:\Users\NELSON\Documents\repositorios\Applications\Applications\Applications\..\bin\Testing.exe
   Applications.vcxproj -> ..\bin\Testing.pdb (Full PDB)

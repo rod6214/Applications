@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:sassex.Views"
         xmlns:viewModel="clr-namespace:sassex.ViewModels"
         mc:Ignorable="d"
-        Title="Principal" Height="126" Width="338">
+        Title="Principal" Height="322.125" Width="338">
     <Window.DataContext>
         <viewModel:PrincipalViewModel />
     </Window.DataContext>

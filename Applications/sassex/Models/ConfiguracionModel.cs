@@ -19,7 +19,7 @@ namespace sassex.Models
         #region Constructors
         public ConfiguracionModel()
         {
-            InputDirectory = @"C:\";
+            InputDirectory = @"";
         }
         #endregion
     }

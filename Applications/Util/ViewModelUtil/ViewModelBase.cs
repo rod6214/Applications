@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Windows.Input;
 
 namespace Util.ViewModelUtil
 {
@@ -11,6 +12,7 @@ namespace Util.ViewModelUtil
     {
         #region Events
         public event PropertyChangedEventHandler PropertyChanged;
+        
         #endregion
 
         #region Fields
