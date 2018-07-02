@@ -1,0 +1,17 @@
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\bin\sassex_x86\sassex.exe.config
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\bin\sassex_x86\sassex.exe
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\bin\sassex_x86\sassex.pdb
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\App.g.cs
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\sassex_MarkupCompile.cache
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\sassex.Properties.Resources.resources
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\sassex.csproj.GenerateResource.Cache
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\sassex.exe
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\sassex.pdb
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\Views\Principal.g.cs
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\sassex_MarkupCompile.lref
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\Views\Principal.baml
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\sassex.g.resources
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\Views\Configuracion.g.cs
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\Views\Configuracion.baml
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\sassex\obj\Debug\sassex.csprojResolveAssemblyReference.cache

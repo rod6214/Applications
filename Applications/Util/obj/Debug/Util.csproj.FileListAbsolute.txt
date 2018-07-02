@@ -1,0 +1,5 @@
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\bin\util_x86\Util.dll
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\bin\util_x86\Util.pdb
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\Util\obj\Debug\Util.dll
+C:\Users\NELSON\Documents\repositorios\Applications\Applications\Util\obj\Debug\Util.pdb
