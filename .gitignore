@@ -4,3 +4,10 @@
 
 *.opendb
 *.db
+*.dll
+*.exe
+*.vshost
+*.manifest
+*.pdb
+*.json
+*.ilk
