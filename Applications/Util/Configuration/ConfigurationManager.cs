@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
 using Util.Enums;
+using Util.ModelUtil;
 
 namespace Util.Configuration
 {
     public static class ConfigurationManager
     {
         #region JsonSerializer
-        public static void ObjectSerializer(object model, ConfigurationRoot root, object locker)
+        public static void ObjectSerializer(IModel model, ConfigurationRoot root, object locker)
         {
             lock (locker)
             {
@@ -25,7 +26,7 @@ namespace Util.Configuration
             }
         }
 
-        public static object ObjectDeserializer(Type type, ConfigurationRoot root, object locker)
+        public static IModel ObjectDeserializer(Type type, ConfigurationRoot root, object locker)
         {
             lock (locker)
             {
@@ -39,7 +40,7 @@ namespace Util.Configuration
             }
         }
 
-        private static void WriteDataDefault(object model)
+        private static void WriteDataDefault(IModel model)
         {
             string rootDir = Path.Combine(Directory.GetCurrentDirectory(), "configuration");
             if (!Directory.Exists(rootDir))
@@ -49,13 +50,13 @@ namespace Util.Configuration
             File.WriteAllText(filePath, json);
         }
 
-        private static object ReadDataDefault(Type type)
+        private static IModel ReadDataDefault(Type type)
         {
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "configuration", "mainconfig.json");
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                return JsonConvert.DeserializeObject(json, type);
+                return JsonConvert.DeserializeObject(json, type) as IModel;
             }
             else
                 return null;

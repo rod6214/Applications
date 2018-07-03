@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using WindowsForm = System.Windows.Forms;
+
 namespace sassex.Views
 {
     /// <summary>
@@ -23,6 +25,30 @@ namespace sassex.Views
         public Configuracion()
         {
             InitializeComponent();
+        }
+
+        public void Save()
+        {
+            configViewModel.Save();
+        }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            using (var dirDialog = new WindowsForm.FolderBrowserDialog())
+            {
+                var result = dirDialog.ShowDialog();
+                switch (result)
+                {
+                    case WindowsForm.DialogResult.OK:
+                        configViewModel.InputDirectory = dirDialog.SelectedPath;
+                        break;
+                }
+            }
+        }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            Save();
         }
     }
 }

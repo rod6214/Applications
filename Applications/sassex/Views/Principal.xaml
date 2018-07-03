@@ -6,14 +6,15 @@
         xmlns:local="clr-namespace:sassex.Views"
         xmlns:viewModel="clr-namespace:sassex.ViewModels"
         mc:Ignorable="d"
-        Title="Principal" Height="322.125" Width="338">
+        Title="Principal" Height="322.125" Width="530.145"
+        Closing="Window_Closing">
     <Window.DataContext>
         <viewModel:PrincipalViewModel />
     </Window.DataContext>
     <Grid>
         <TabControl>
             <TabItem Header="Configuracion">
-                <local:Configuracion />
+                <local:Configuracion x:Name="config"/>
             </TabItem>
             <TabItem Header="Ejecucion">
             </TabItem>

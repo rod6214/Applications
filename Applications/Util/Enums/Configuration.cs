@@ -10,4 +10,10 @@ namespace Util.Enums
     {
         DEFAULTROOT
     }
+
+    public enum Language
+    {
+        ENGLISH,
+        SPANISH
+    }
 }

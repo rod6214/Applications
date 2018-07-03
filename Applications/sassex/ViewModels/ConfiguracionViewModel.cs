@@ -7,6 +7,7 @@ using System.ComponentModel;
 using Util.ViewModelUtil;
 using Util.Configuration;
 using Util.Enums;
+using Util.ModelUtil;
 using sassex.Models;
 
 namespace sassex.ViewModels
@@ -15,13 +16,8 @@ namespace sassex.ViewModels
     {
         #region Fields
         private ConfiguracionModel _configuration;
+        private string _inputDirLabel;
         private object _locker;
-        #endregion
-
-        #region Commands
-        public Command Buscar => new Command(BuscarEvent);
-
-        public Command Guardar => new Command(GuardarEvent);
         #endregion
 
         #region Properties
@@ -29,9 +25,7 @@ namespace sassex.ViewModels
         {
             get
             {
-                if (_configuration == null)
-                    return String.Empty;
-                return _configuration.InputDirectory;
+                return _configuration.InputDirectory ?? String.Empty;
             }
             set
             {
@@ -42,33 +36,57 @@ namespace sassex.ViewModels
                 }
             }
         }
+
+        public Language Lang
+        {
+            get { return _configuration.Lang; }
+            set
+            {
+                if (_configuration?.Lang != value)
+                {
+                    _configuration.Lang = value;
+                    NotifyPropertyChanged(nameof(Lang));
+                }
+            }
+        }
+
+        public string InputDirLabel
+        {
+            get
+            {
+                return _inputDirLabel ?? String.Empty;
+            }
+            set
+            {
+                if (_inputDirLabel != value)
+                {
+                    _inputDirLabel = value;
+                    NotifyPropertyChanged(nameof(InputDirLabel));
+                }
+            }
+        }
         #endregion
 
         #region Constructors
         public ConfiguracionViewModel()
         {
             _locker = new object();
-            PropertyChanged += ConfiguracionViewModel_PropertyChanged;
-            _configuration = ConfigurationManager.ObjectDeserializer(typeof(ConfiguracionModel),ConfigurationRoot.DEFAULTROOT, _locker) 
-                as ConfiguracionModel ?? new ConfiguracionModel();
+            Load();
+            InputDirLabel = @"Directorio de salida:";
         }
         #endregion
 
         #region Methods
         public void Save()
         {
-            ConfigurationManager.ObjectSerializer(_configuration, ConfigurationRoot.DEFAULTROOT, _locker);
+            ConfigurationManager.ObjectSerializer(GetModel(), ConfigurationRoot.DEFAULTROOT, _locker);
         }
-        private void BuscarEvent()
+
+        public void Load()
         {
-            
-        }
-        private void GuardarEvent()
-        {
-            Save();
-        }
-        private void ConfiguracionViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
+            _configuration = ConfigurationManager.ObjectDeserializer(typeof(ConfiguracionModel), ConfigurationRoot.DEFAULTROOT, _locker)
+                as ConfiguracionModel ?? new ConfiguracionModel();
+            SetModel(_configuration);
         }
         #endregion
     }

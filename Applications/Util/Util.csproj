@@ -35,6 +35,7 @@
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,14 +48,21 @@
   <ItemGroup>
     <Compile Include="Configuration\ConfigurationManager.cs" />
     <Compile Include="Enums\Configuration.cs" />
+    <Compile Include="ModelUtil\IModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelUtil\Command.cs" />
     <Compile Include="ViewModelUtil\CommandBase.cs" />
+    <Compile Include="ViewModelUtil\IViewModel.cs" />
     <Compile Include="ViewModelUtil\ViewModelBase.cs" />
+    <Compile Include="WpfConverters\LanguageConverter.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Language\English.txt" />
+    <Content Include="Language\Spanish.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
